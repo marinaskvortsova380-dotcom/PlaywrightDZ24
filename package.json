@@ -1,0 +1,29 @@
+{
+  "name": "playwrightdz24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinaskvortsova380-dotcom/PlaywrightDZ24.git",
+    "test": "playwright test ",
+    "test:ui": " playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui:debug": "playwright test --ui --debug",
+    "test:ui:headed:debug": "playwright test --ui --headed --debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marinaskvortsova380-dotcom/PlaywrightDZ24/issues"
+  },
+  "homepage": "https://github.com/marinaskvortsova380-dotcom/PlaywrightDZ24#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2"
+  }
+}
