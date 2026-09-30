@@ -76,7 +76,7 @@ test.describe('Registration tests', () => {
     await page.locator('#signupLastName').blur();
 
     //Ожидаемый результат
-    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last Name is required');
+    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last name is required');
     await expect(page.locator('#signupLastName')).toBeVisible();
     await expect(page.locator('#signupLastName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');
    
@@ -87,7 +87,7 @@ test.describe('Registration tests', () => {
     await page.locator('#signupLastName').blur();
 
     //Ожидаемый результат
-    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last Name has to be from 2 to 20 characters long');
+    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last name has to be from 2 to 20 characters long');
     await expect(page.locator('#signupLastName')).toBeVisible();
     await expect(page.locator('#signupLastName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');
    
@@ -98,7 +98,7 @@ test.describe('Registration tests', () => {
     await page.locator('#signupLastName').blur();
 
     //Ожидаемый результат
-    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last Name has to be from 2 to 20 characters long');
+    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last name has to be from 2 to 20 characters long');
     await expect(page.locator('#signupLastName')).toBeVisible();
     await expect(page.locator('#signupLastName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');
    
@@ -108,9 +108,9 @@ test.describe('Registration tests', () => {
     await page.locator('#signupLastName').fill('!');
     await page.locator('#signupLastName').blur();
     //Ожидаемый результат
-    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last Name is invalid');
+    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last name is invalidLast name has to be from 2 to 20 characters long');
     await expect(page.locator('#signupLastName')).toBeVisible();
-    await expect(page.locator('#signupLastName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');
+    await expect(page.locator('#signupLastName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');  
    
   });
   });
