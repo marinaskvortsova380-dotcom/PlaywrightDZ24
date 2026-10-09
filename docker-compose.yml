@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cypress-firefox:
+    image: cypress/included:13.6.0
+    container_name: cypress_firefox_dz30
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    command: ["--browser", "firefox"]
+    environment:
+      - CYPRESS_baseUrl=https://guest:welcome2qauto@qauto.forstudy.space
