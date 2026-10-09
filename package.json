@@ -9,7 +9,13 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:ui:debug": "playwright test --ui --debug",
-    "test:ui:headed:debug": "playwright test --ui --headed --debug"
+    "test:ui:headed:debug": "playwright test --ui --headed --debug",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "docker:cy:firefox": "docker run --rm -it -v ${PWD}:/e2e -w /e2e cypress/included:13.6.0 --browser firefox",
+    "docker:cy:dz21": "docker run --rm -it -v ${PWD}:/e2e -w /e2e cypress/included:13.6.0 --spec \"DZ21/**/*.cy.js\" --browser firefox",
+    "docker:cy:dz22": "docker run --rm -it -v ${PWD}:/e2e -w /e2e cypress/included:13.6.0 --spec \"DZ22API/**/*.cy.js\" --browser firefox",
+    "docker:cy:all": "docker run --rm -it -v ${PWD}:/e2e -w /e2e cypress/included:13.6.0 --browser firefox",
+    "docker:compose:up": "docker compose up --abort-on-container-exit"
   },
   "repository": {
     "type": "git",
