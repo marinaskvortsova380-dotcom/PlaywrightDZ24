@@ -10,6 +10,7 @@
     "test:debug": "playwright test --debug",
     "test:ui:debug": "playwright test --ui --debug",
     "test:ui:headed:debug": "playwright test --ui --headed --debug",
+    "cy:run": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox",
     "docker:cy:firefox": "docker run --rm -it -v ${PWD}:/e2e -w /e2e cypress/included:13.6.0 --browser firefox",
     "docker:cy:dz21": "docker run --rm -it -v ${PWD}:/e2e -w /e2e cypress/included:13.6.0 --spec \"DZ21/**/*.cy.js\" --browser firefox",
@@ -36,7 +37,10 @@
   },
   "homepage": "https://github.com/marinaskvortsova380-dotcom/PlaywrightDZ24#readme",
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
+    "@playwright/test": "^1.39.0",
     "@types/node": "^26.6.2"
+  },
+  "dependencies": {
+    "cypress": "^13.6.0"
   }
 }

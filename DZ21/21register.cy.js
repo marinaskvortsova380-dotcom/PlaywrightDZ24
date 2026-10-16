@@ -1,8 +1,13 @@
 import signInPage from './21SignIn';
 import garagePage from './21GaragePage';
 import expensesPage from './21ExpensesPage';
+import '../DZ22API/commands';
 
 describe('Garage & Fuel Expenses with POM', () => {
+  before(() => {
+    cy.deleteAllCarsApi(Cypress.env('user1Email'), Cypress.env('user1Password'));
+  });
+
   beforeEach(() => {
     signInPage.open();
     signInPage.login(

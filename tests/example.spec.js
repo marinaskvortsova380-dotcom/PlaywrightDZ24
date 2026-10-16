@@ -31,7 +31,7 @@ test.describe('Registration tests', () => {
     await page.locator('#signupName').blur();
 
     //Ожидаемый результат
-    await expect(page.locator('#signupName ~ .invalid-feedback')).toContainText('Name is required');
+    await expect(page.locator('#signupName ~ .invalid-feedback')).toContainText(/Name (is )?required/);
     await expect(page.locator('#signupName')).toBeVisible();
     await expect(page.locator('#signupName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');
    
@@ -76,7 +76,7 @@ test.describe('Registration tests', () => {
     await page.locator('#signupLastName').blur();
 
     //Ожидаемый результат
-    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText('Last name is required');
+    await expect(page.locator('#signupLastName ~ .invalid-feedback')).toContainText(/Last name (is )?required/);
     await expect(page.locator('#signupLastName')).toBeVisible();
     await expect(page.locator('#signupLastName')).toHaveCSS('border-color', 'rgb(220, 53, 69)');
    

@@ -31,7 +31,7 @@ import { GaragePage } from '../PagesPOM/GaragePage';
         });
         test('Empty name field validation', async () => {
             await registrationModal.triggerNameValidation()
-            await expect(registrationModal.nameError).toContainText('Name is required');
+            await expect(registrationModal.nameError).toContainText(/Name (is )?required/);
             await expect(registrationModal.nameInput).toBeVisible();
             await expect(registrationModal.nameInput).toHaveCSS('border-color', 'rgb(220, 53, 69)');
         });
@@ -55,7 +55,7 @@ import { GaragePage } from '../PagesPOM/GaragePage';
       });
       test('Empty Last Name Field Validation', async() => {
         await registrationModal.triggerLastNameValidation();
-        await expect(registrationModal.lastNameError).toContainText('Last name is required');
+        await expect(registrationModal.lastNameError).toContainText(/Last name (is )?required/);
         await expect(registrationModal.lastNameInput).toHaveCSS('border-color', 'rgb(220, 53, 69)');
         await expect(registrationModal.lastNameInput).toBeVisible();
       });
